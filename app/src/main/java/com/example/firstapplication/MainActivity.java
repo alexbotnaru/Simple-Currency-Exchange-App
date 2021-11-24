@@ -35,14 +35,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Initialization
         currencyConverted = (TextView) findViewById(R.id.currency_converted);
         currencyToBeConverted = (EditText) findViewById(R.id.currency_to_be_converted);
         convertToDropdown = (Spinner) findViewById(R.id.convert_to);
         convertFromDropdown = (Spinner) findViewById(R.id.convert_from);
         button = (Button) findViewById(R.id.button);
 
-        //Adding Functionality
         String[] dropDownList = {"USD", "EUR", "GBP", "MDL", "RUB", "RON"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, dropDownList);
         convertToDropdown.setAdapter(adapter);
@@ -76,8 +74,5 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-
-
-
     }
 }
